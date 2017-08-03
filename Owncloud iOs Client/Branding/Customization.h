@@ -26,10 +26,10 @@
 #define k_hide_url_server NO
 
 //Set a default url server. It must be obligatory if we hide the url server (#define k_hide_url_server YES)
-#define k_default_url_server @""
+#define k_default_url_server @"http://docker.oc.solidgear.es:56459"
 
 //force override existing accounts with k_default_url_server. It must be obligatory if we change authentication type (k_is_sso_active)
-#define k_force_update_of_server_url NO
+#define k_force_update_of_server_url YES
 
 //Show multiaccount or disconnect
 #define k_multiaccount_available YES
@@ -171,6 +171,7 @@
 
 +(BOOL)kHideUrlServer;
 +(BOOL)kForceUpdateOfServerUrl;
++(BOOL)kMultiaccountAvailable;
 +(BOOL)kIsSsoActive;
 +(BOOL)kIsTextLoginStatusBarWhite;
 +(BOOL)kIsShownHelpLinkOnLogin;
