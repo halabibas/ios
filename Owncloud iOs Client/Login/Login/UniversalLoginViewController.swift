@@ -418,6 +418,7 @@ connection_declined  Connection declined by user
         self.textFieldPassword.text = ""
         self.revealPasswordButton.setBackgroundImage(UIImage(named: "RevealPasswordIcon.png"), for: .normal)
         self.labelPasswordFooter.text = ""
+        self.imageViewPasswordFooter.image = nil
         
         UIView.animate(withDuration: 0.5, animations: {
             self.usernameStackView.isHidden = hiddenStatus
@@ -428,10 +429,6 @@ connection_declined  Connection declined by user
             self.passwordStackView.isHidden = hiddenStatus
             self.basicAuthInfoStackView.isHidden = hiddenStatus
         })
-        
-        if hiddenStatus {
-            self.textFieldUsername.becomeFirstResponder()
-        }
     }
     
     func updateUIWithNormalizedData(_ oNormalized: ServerURLNormalizer) {
@@ -512,14 +509,15 @@ connection_declined  Connection declined by user
                     if (self.authMethodToLogin != .NONE) {
                         self.setReconnectionButtons(hiddenStatus: true)
                         
-                        
-                        
                         if (self.authMethodToLogin == .BASIC_HTTP_AUTH) {
                             self.setBasicAuthLoginStackViews(hiddenStatus: false)
+                            self.textFieldURL.resignFirstResponder()
+                            self.textFieldUsername.becomeFirstResponder()
                         } else {
                             self.setBasicAuthLoginStackViews(hiddenStatus: true)
                             self.setConnectButton(status: true)
                             self.startAuthenticationWith(authMethod: self.authMethodToLogin)
+                            
                         }
                         
                         //else { //TODO: enabledafter enter password and no empty user pass

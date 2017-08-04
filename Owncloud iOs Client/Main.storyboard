@@ -341,7 +341,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem id="Srt-MH-Z13">
-                                        <barButtonItem key="leftBarButtonItem" title="Item" id="Yhs-Ln-8f5" userLabel="Item cancel">
+                                        <barButtonItem key="rightBarButtonItem" title="Item" id="Yhs-Ln-8f5" userLabel="Item cancel">
                                             <connections>
                                                 <action selector="cancelButtonTapped:" destination="f4N-GJ-PQD" id="j7m-7k-00M"/>
                                             </connections>

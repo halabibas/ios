@@ -26,7 +26,7 @@
 #define k_hide_url_server NO
 
 //Set a default url server. It must be obligatory if we hide the url server (#define k_hide_url_server YES)
-#define k_default_url_server @"http://docker.oc.solidgear.es:56459"
+#define k_default_url_server @""
 
 //force override existing accounts with k_default_url_server. It must be obligatory if we change authentication type (k_is_sso_active)
 #define k_force_update_of_server_url YES
@@ -130,7 +130,7 @@
 #define k_is_text_login_status_bar_white NO
 
 //Show the help link on login
-#define k_is_shown_help_link_on_login NO
+#define k_is_shown_help_link_on_login YES
 #define k_url_link_on_login @"https://owncloud.com/mobile/new"
 
 //User-Agent, Mozilla/5.0 (iOS) ownCloud-iOS/<appVersion> <ob_customUserAgent>
